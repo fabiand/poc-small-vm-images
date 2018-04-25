@@ -1,0 +1,3 @@
+FROM fedora
+
+RUN mkosi -d fedora -t raw_gpt -o out -b -i
