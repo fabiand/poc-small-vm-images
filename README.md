@@ -1,5 +1,5 @@
-| Build | [![Docker Repository on Quay](https://quay.io/repository/fabiand/poc-small-vm-images-dracut/status "Docker Repository on Quay")](https://quay.io/repository/fabiand/poc-small-vm-images-dracut) |
-| Tests | [![Build Status](https://travis-ci.org/fabiand/poc-small-vm-images.svg?branch=master)](https://travis-ci.org/fabiand/poc-small-vm-images) |
+[![Docker Repository on Quay](https://quay.io/repository/fabiand/poc-small-vm-images-dracut/status "Docker Repository on Quay")](https://quay.io/repository/fabiand/poc-small-vm-images-dracut)
+[![Build Status](https://travis-ci.org/fabiand/poc-small-vm-images.svg?branch=master)](https://travis-ci.org/fabiand/poc-small-vm-images)
 
 # Building small images for Virtual Machines
 
