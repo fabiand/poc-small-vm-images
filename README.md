@@ -1,4 +1,16 @@
 # Building small images for Virtual Machines
 
-1. ~70MB - Using initrd + vmlinux from Fedora, drop into a dracut shell
-2. ~1.5GB - Using mkosi and Fedora
+| make target         | size     | description |
+| ------------------- | -------- | ----------- |
+| `output.dracut.iso` |    ~70MB | Using initrd + vmlinux from Fedora, drop into a dracut shell |
+| `output.mkosi.img`  | ~1.500MB | Using mkosi and Fedora |
+
+# Run
+
+```
+$ qemu-system-x86_64 -enable-kvm \
+    -m 1024 -smp 4 \
+    -machine q35 \
+    -device virtio-rng-pci \
+    -drive file=output.dracut.iso,if=virtio,format=raw
+```

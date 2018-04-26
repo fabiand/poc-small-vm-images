@@ -15,8 +15,10 @@ RUN cd /iso/ && curl -LO \
 
 ADD isolinux.cfg /iso
 
+# https://www.syslinux.org/wiki/index.php?title=ISOLINUX
+# https://www.syslinux.org/wiki/index.php?title=Isohybrid
 RUN mkisofs -o /output.iso -b isolinux.bin -c boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table \
-  /iso
+  /iso && isohybrid /output.iso
 
 RUN ls -shal /output.iso
