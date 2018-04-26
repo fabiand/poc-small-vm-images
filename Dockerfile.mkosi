@@ -1,3 +1,4 @@
 FROM fedora
 
-RUN mkosi -d fedora -t raw_gpt -o out -b -i
+RUN dnf install -y mkosi && dnf clean all
+RUN mkosi -d fedora -t raw_gpt -o output.img -b -i
