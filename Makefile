@@ -5,6 +5,4 @@ iso:
 	docker cp iso:/output.iso /tmp/output.iso
 
 mkosi:
-	docker build -t mkosi -f Dockerfile.mkosi .
-	docker run --rm --name mkosi -it mkosi sleep 30
-	docker cp mkosi:/output.mkosi /tmp/output.mkosi
+	mkosi -d fedora -t raw_gpt -o output.img -b -i
