@@ -1,6 +1,6 @@
 FROM docker.io/library/fedora
 
-RUN dnf install -y genisoimage && dnf clean all
+RUN dnf install -y genisoimage syslinux && dnf clean all
 
 ENV BASEURL=https://download.fedoraproject.org/pub/fedora/linux/releases/27/Server/x86_64/os/isolinux
 RUN mkdir -p /iso
